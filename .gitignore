@@ -1,0 +1,10 @@
+/vendor/
+*.swp
+*.php~
+.DS_Store
+/nbproject/
+/.idea/
+/ezpublish/
+/ezpublish_legacy/
+/web/
+/composer.phar
