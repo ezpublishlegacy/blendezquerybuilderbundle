@@ -6,7 +6,7 @@
  * Time: 5:28 AM
  * To change this template use File | Settings | File Templates.
  */
-use Blend\EzQueryBuilderBundle\Services\BlendEzQueryBuilder as QueryBuilder,
+use Blend\EzQueryBuilderBundle\Service\EzQueryBuilder as QueryBuilder,
     eZ\Publish\API\Repository\Values\Content\Query,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator,
@@ -15,7 +15,7 @@ use Blend\EzQueryBuilderBundle\Services\BlendEzQueryBuilder as QueryBuilder,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion\LogicalNot,
     eZ\Publish\API\Repository\Values\Content\Query\CriterionInterface;
 
-class BlendeZQueryBuilderTest extends PHPUnit_Framework_TestCase
+class EZQueryBuilderTest extends PHPUnit_Framework_TestCase
 {
 
 

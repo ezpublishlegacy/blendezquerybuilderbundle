@@ -11,16 +11,16 @@
         "php": ">=5.3.3",
         "ezsystems/ezpublish-kernel": "dev-master"
 	},
-    "autoload": {
-        "psr-0": {
-            "": "src/"
-        }
-    },
     "minimum-stability": "dev",
     "config": {
         "process-timeout": 3000
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*"
-    }
+    },
+    "autoload": {
+        "psr-0": { "Blend\\Bundle\\EzQueryBuilderBundle": "" }
+    },
+    "target-dir": "Blend/Bundle/EzQueryBuilderBundle"
+
 }

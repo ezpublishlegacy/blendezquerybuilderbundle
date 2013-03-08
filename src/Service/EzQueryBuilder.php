@@ -6,7 +6,7 @@
  * Author: Joe Kepley
  * Date: 3/8/13
  */
-namespace Blend\EzQueryBuilderBundle\Services;
+namespace Blend\EzQueryBuilderBundle\Service;
 use eZ\Publish\API\Repository\Values\Content\Query,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion\ContentId,
@@ -35,7 +35,7 @@ use eZ\Publish\API\Repository\Values\Content\Query,
     eZ\Publish\API\Repository\Values\Content\Query\SortClause,
     eZ\Publish\API\Repository\Values\Content\Query\CriterionInterface;
 
-class BlendEzQueryBuilder
+class EzQueryBuilder
 {
     /**
      * @var Query

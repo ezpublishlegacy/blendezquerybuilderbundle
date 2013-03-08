@@ -1,7 +1,9 @@
 parameters:
-#    blend_ez_query_builder.example.class: Blend\EzQueryBuilderBundle\Example
+    blend_ez_query_builder.service.builder.class: Blend\EzQueryBuilderBundle\Service\EzQueryBuilder
 
 services:
+    blend_ez_query_builder.builder:
+        class: %blend_ez_query_builder.service.builder.class%
 #    blend_ez_query_builder.example:
 #        class: %blend_ez_query_builder.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
