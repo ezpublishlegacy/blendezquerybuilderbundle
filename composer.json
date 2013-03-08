@@ -1,6 +1,16 @@
 {
 	"name":"blend/ezquerybuilderbundle",
     "type": "symfony-bundle",
+    "description": "Syntactic Sugar Fluent query interface for the eZ 5 Public API",
+    "keywords": ["ezpublish", "bundle", "query"],
+    "homepage": "http://github.com/blendinteractive/blendezquerybuilderbundle.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joe Kepley",
+            "email": "joe@blendinteractive.com"
+        }
+    ],
     "repositories": [
         {
             "type": "vcs",

@@ -6,7 +6,7 @@
  * Author: Joe Kepley
  * Date: 3/8/13
  */
-namespace Blend\EzQueryBuilderBundle\Service;
+namespace Blend\Bundle\EzQueryBuilderBundle\Service;
 use eZ\Publish\API\Repository\Values\Content\Query,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion\ContentId,

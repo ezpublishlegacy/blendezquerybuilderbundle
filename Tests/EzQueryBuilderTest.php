@@ -6,7 +6,7 @@
  * Time: 5:28 AM
  * To change this template use File | Settings | File Templates.
  */
-use Blend\EzQueryBuilderBundle\Service\EzQueryBuilder as QueryBuilder,
+use Blend\Bundle\EzQueryBuilderBundle\Service\EzQueryBuilder as QueryBuilder,
     eZ\Publish\API\Repository\Values\Content\Query,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator,
