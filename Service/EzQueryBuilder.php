@@ -121,22 +121,45 @@ class EzQueryBuilder
 
     /**
      * Restrict search by date created
-     * @param string $operator
-     * @param mixed $value
+     * @param string $operator value defined by eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator
+     * @param mixed $value array of values or integer seconds since the epoch
      */
     public function dateCreated( $operator, $value )
     {
         return $this->criterion(new DateMetadata( DateMetadata::CREATED, $operator, $value ));
     }
 
+    /**
+     * Restrict search by data modified
+     * @param string $operator value defined by eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator
+     * @param mixed $value array of values or integer seconds since the epoch
+     * @return EzQueryBuilder
+     */
     public function dateModified( $operator, $value )
     {
         return $this->criterion(new DateMetadata( DateMetadata::MODIFIED, $operator, $value));
     }
 
+    /**
+     * Restrict the search based on a field on a content type
+     * @param string $fieldIdentifier string identifier for a field
+     * @param string $operator value defined by eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator
+     * @param mixed $value value to compare the field against
+     * @return EzQueryBuilder
+     */
     public function field( $fieldIdentifier, $operator, $value )
     {
         return $this->criterion(new Field($fieldIdentifier, $operator, $value) );
+    }
+
+    /**
+     *
+     * @param string $text Text keywords
+     * @return EzQueryBuilder
+     */
+    public function fullText( $text )
+    {
+        return $this->criterion(new FullText($text));
     }
 
     public function parentLocationId( $locationId )

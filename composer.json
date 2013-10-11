@@ -19,7 +19,7 @@
     ],
 	"require": {
         "php": ">=5.3.3",
-        "ezsystems/ezpublish-kernel": "dev-master"
+		"blend/ezquerybuilderbundle": "dev-master"
 	},
     "minimum-stability": "dev",
     "require-dev": {

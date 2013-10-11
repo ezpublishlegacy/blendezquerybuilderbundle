@@ -4,6 +4,11 @@ parameters:
 services:
     blend_ez_query_builder.builder:
         class: %blend_ez_query_builder.service.builder.class%
+        arguments: [@ezpublish.api.repository]
+
+    ez_query_builder:
+        alias: blend_ez_query_builder.builder
+
 #    blend_ez_query_builder.example:
 #        class: %blend_ez_query_builder.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]

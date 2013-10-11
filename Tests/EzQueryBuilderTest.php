@@ -9,6 +9,7 @@
 use Blend\Bundle\EzQueryBuilderBundle\Service\EzQueryBuilder as QueryBuilder,
     eZ\Publish\API\Repository\Values\Content\Query,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion,
+    eZ\Publish\API\Repository\Values\Content\Query\Criterion\DateMetadata,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion\LogicalAnd,
     eZ\Publish\API\Repository\Values\Content\Query\Criterion\LogicalOr,
@@ -104,5 +105,35 @@ class EZQueryBuilderTest extends PHPUnit_Framework_TestCase
             'blog_post',
             'string'
         );
+    }
+
+    public function testDateCreated()
+    {
+        $qb = new QueryBuilder();
+        $q = $qb->dateCreated(Operator::EQ, strtotime('2013-01-15'))->query;
+
+        $criteria = reset($q->criterion->criteria);
+
+        $this->assertInstanceOf(
+            'eZ\Publish\API\Repository\Values\Content\Query\Criterion\DateMetaData',
+            $criteria
+        );
+
+        $this->assertEquals(
+            DateMetadata::CREATED,
+            $criteria->target
+        );
+
+        $this->assertEquals(
+            Operator::EQ,
+            $criteria->operator
+        );
+
+        $this->assertEquals(
+            strtotime('2013-01-15'),
+            $criteria->value
+        );
+
+
     }
 }
